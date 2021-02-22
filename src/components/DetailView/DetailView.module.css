@@ -1,0 +1,40 @@
+.imgContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.userInfo {
+	display: flex;
+	flex-direction: row;
+	margin: 1rem;
+	align-items: center;
+}
+
+.profileImage {
+	width: 7rem; 
+}
+
+.userContact {
+	display: flex;
+	margin-top: 1.5rem;
+	flex-direction: row;
+}
+
+.icons {
+	margin-right:  4px;
+}
+
+
+h4 {
+	font-size: 0.8em;
+	margin-right: 15px;
+}
+
+.linkContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+}

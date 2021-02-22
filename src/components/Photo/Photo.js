@@ -1,17 +1,40 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Photo.module.css';
 import { FaRegHeart } from 'react-icons/fa';
+import ModalContext from '../../context/ModalContext/ModalContext';
 
-const Photo = ({id, refer, name, username, urls, likes, profile_image}) => {
+const Photo = ({id, refer, name, username, twitter, instagram, urls, likes, download, profile_image}) => {
 
 
+	const [modal, setModal] = useContext(ModalContext);
+	const modalHandler = () => {
+		const newModal = {...modal}
+		newModal.showModal = !newModal.showModal;
+		newModal.photo = {
+			id, 
+			name,
+			username,
+			urls,
+			likes,
+			twitter,
+			instagram,
+			download,
+			profile_image
+		}
+
+		console.log(newModal)
+
+
+		setModal(newModal);
+	}
 
 	return (
 		<div 
 			ref={refer} 
 			class={`card rounded m-2 ${styles.photo}`}
+			onClick={modalHandler}
 		>
-			<img src={urls.thumb} alt='thumbnail' class={`card-img-top ${styles.thumbnail}`} />
+			<img src={urls.thumb} alt='thumbnail' className={`card-img-top ${styles.thumbnail}`} />
 
 			<div className='card-body d-flex align-items-center justify-content-between'>
 				<div className='row'>

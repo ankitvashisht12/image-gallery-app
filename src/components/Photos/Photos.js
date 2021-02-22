@@ -32,7 +32,10 @@ const Photos = ({ photos, loading, more, setPageNo}) => {
 				username={photo.user.username}
 				urls={photo.urls}
 				likes={photo.likes}
-				profile_image={photos.profile_image} />
+				twitter={photo.user.twitter_username}
+				instagram={photo.user.instagram_username}
+				download={photo.links.download}
+				profile_image={photo.user.profile_image} />
 			)
 		}
 
@@ -43,7 +46,10 @@ const Photos = ({ photos, loading, more, setPageNo}) => {
 				username={photo.user.username}
 				urls={photo.urls}
 				likes={photo.likes}
-				profile_image={photos.profile_image} />
+				twitter={photo.user.twitter_username}
+				instagram={photo.user.instagram_username}
+				download={photo.links.download}
+				profile_image={photo.user.profile_image} />
 		);
 	});
 	return (
