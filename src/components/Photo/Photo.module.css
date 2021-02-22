@@ -1,0 +1,41 @@
+.photo {
+	width: 18rem;
+}
+
+.photo:hover{
+	cursor: pointer;
+	border: 1px solid black;
+	box-shadow: 0px 0px 20px rgb(119, 119, 119);
+
+}
+
+.thumbnail {
+	height: 10rem;
+	object-fit: cover;
+}
+
+h2 {
+	font-size: 1.2em;
+	margin: 0;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1em;
+	font-style: italic;
+	color: grey;
+}
+
+.likes {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.icons {
+	margin-right: 0.5rem;
+	color: red;
+}
+
