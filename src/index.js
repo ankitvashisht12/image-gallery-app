@@ -4,6 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+// setting base url
+axios.defaults.baseURL = 'https://api.unsplash.com/';
 
 ReactDOM.render(
   <React.StrictMode>
