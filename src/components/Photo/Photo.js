@@ -31,7 +31,7 @@ const Photo = ({id, refer, name, username, twitter, instagram, urls, likes, down
 	return (
 		<div 
 			ref={refer} 
-			class={`card rounded m-2 ${styles.photo}`}
+			className={`card rounded m-2 ${styles.photo}`}
 			onClick={modalHandler}
 		>
 			<img src={urls.thumb} alt='thumbnail' className={`card-img-top ${styles.thumbnail}`} />
