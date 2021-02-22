@@ -39,17 +39,28 @@ const useSearchImage = (searchTerm, pageNo) => {
 					}) 
 				});
 
-				setPhotos(photos => [...photos, ...response.data])
+				let data;
+				if(searchTerm.length === 0){
+					data = response.data;
+				}else data = response.data.results;
 
-				setHasMore(response.data.length > 0 );
+				setPhotos(photos => [...photos, ...data])
+
+				setHasMore(data.length > 0 );
 				setLoading(false);
+				if(data.length === 0){
+					setHasError(true);
+					setErrorMsg('No Photos Found! Try another query 🤔');
+				}
 			} catch (err) {
 				if(axios.isCancel(err)) return ;
 				setHasError(true);
 				setLoading(false);
-				//if(err.response.status === 404) setErrorMsg('No Character found !');
-				//else setErrorMsg('Something Went Wrong ! Try Again.')
+
 				console.log(err);
+				if(err.response.status === 404) setErrorMsg('No Photos found !');
+				if(err.response.status === 403) setErrorMsg('😖 API Limit Exceeded! Try after 1 hour.')
+				else setErrorMsg('Something Went Wrong ! Try Again.')
 
 			}
 		}
@@ -60,7 +71,6 @@ const useSearchImage = (searchTerm, pageNo) => {
 	};
 	}, [searchTerm, pageNo]);
 
-	console.log(photos);
 
 
 	return { loading, photos, hasMore, hasError, errorMsg };
