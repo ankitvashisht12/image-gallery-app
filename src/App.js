@@ -5,7 +5,6 @@ import ModalContext from "./context/ModalContext/ModalContext";
 import useSearchImage from "./customHooks/useSearchImage/useSearchImage";
 import DetailView from './components/DetailView/DetailView'
 
-import fakeData from './data.json';
 import Error from "./components/Error/Error";
 import Loading from "./components/Loading/Loading";
 
