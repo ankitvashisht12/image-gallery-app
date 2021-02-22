@@ -8,13 +8,24 @@ Here are some keypoints of this app:
 3. Infinite scrolling using IntersectionObserver API
 4. Clean UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> NOTE: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Screenshots
 
-![Homepage] ()
+![Homepage](https://github.com/ankitvashisht12/image-gallery-app/blob/main/images/a-1.png)
 
-![Modal View] ()
+![Modal View](https://github.com/ankitvashisht12/image-gallery-app/blob/main/images/a-2.png)
+
+## Project Setup
+
+To run this project locally, 
+
+1. `git clone https://github.com/ankitvashisht12/image-gallery-app.git`
+2. run `npm install` inside root directory
+3. hit `npm start`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+> NOTE: Make sure to create `.env` file with your `UNSPLASH_API_KEY` inside it. Check out [.env-example](https://github.com/ankitvashisht12/image-gallery-app/blob/main/.env-example).
 
 ## Project Structure
 
